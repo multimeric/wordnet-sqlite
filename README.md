@@ -18,14 +18,18 @@ connected to the local WordNet database. This client is then returned, and can b
 
 ```javascript
 var db = require("wordnet-sqlite");
+db.get("SELECT definition FROM words WHERE word = 'pulpy' LIMIT 1;", function (err, row) {
+    console.log(row.definition);
+});
 
 ```
+>like a pulp or overripe; not having stiffness
 
 ##Example
 Here's a bot I wrote to email people random compliments (well actually they're more like insults):
 ```javascript
 var nodemailer = require('nodemailer');
-var db = require("../radnom-wordnet/wordnet-sqlite");
+var db = require("wordnet-sqlite");
 
 // create reusable transporter object using SMTP transport
 var transporter = nodemailer.createTransport({
@@ -38,7 +42,7 @@ var transporter = nodemailer.createTransport({
 
 db.get("SELECT * FROM words WHERE type = 'adj' ORDER BY RANDOM() LIMIT 1;", function (err, row) {
     var mailOptions = {
-        from: '<my.email@address.com>',
+        from: 'Me <my.email@address.com>',
         to: 'My Victim <victim@victim.com>',
         subject: 'You are ' + row.word,
         text: row.word + ": " + row.definition
