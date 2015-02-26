@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/TMiguelT/wordnet-sqlite"
   },
-  "version": "0.0.2",
+  "version": "1.0.0",
   "dependencies": {
     "sqlite3": "^3.0.5"
   }
