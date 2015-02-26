@@ -28,6 +28,8 @@ build/Release
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules
 
+.idea
+
 #The raw dictionary used to generate the sqlite database (http://wordnet.princeton.edu/wordnet/download/current-version/)
 raw_dict
 
