@@ -12,7 +12,7 @@ npm install wordnet-sqlite
 Note that installing the module will install the SQLite3 module as a dependency, which requires compilation using node-gyp,
 so a working toolchain is required to install this module.
 
-##API
+## API
 
 On requiring the module, an instance of an [sqlite3](https://github.com/mapbox/node-sqlite3) client is created and
 connected to the local WordNet database. This client is then returned, and can be used according to the
@@ -29,7 +29,7 @@ Outputs:
 
 >like a pulp or overripe; not having stiffness
 
-##Example
+## Example
 
 Here's a bot I wrote to email people random compliments (well actually they're more like insults):
 ```javascript
@@ -67,7 +67,7 @@ db.get("SELECT * FROM words WHERE type = 'adj' ORDER BY RANDOM() LIMIT 1;", func
 Outputs:
 ![Mailer Results](http://i.imgur.com/2irUI0x.png)
 
-##Contributions
+## Contributions
 
 The GitHub repository contains the raw_dict directory, which contains the data.adj, data.adv, data.noun and data.verb
 files from the [WordNet website](http://wordnet.princeton.edu/wordnet/download/current-version/) (version 3.1). If WordNet
