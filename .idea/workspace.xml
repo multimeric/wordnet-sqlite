@@ -34,21 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="1200">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="22" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-              <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.67896676" vertical-offset="0" max-vertical-offset="1216">
+              <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -58,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/wordnet-sqlite.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
-              <caret line="0" column="30" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="30" />
+              <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -104,8 +94,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.npmignore" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/test.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -374,23 +364,15 @@
     <entry file="file://$PROJECT_DIR$/wordnet-sqlite.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="160">
-          <caret line="0" column="30" selection-start-line="0" selection-start-column="23" selection-end-line="0" selection-end-column="30" />
+          <caret line="4" column="42" selection-start-line="4" selection-start-column="42" selection-end-line="4" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="1200">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="22" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.67896676" vertical-offset="0" max-vertical-offset="1216">
+          <caret line="23" column="3" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
           <folding />
         </state>
       </provider>

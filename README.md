@@ -13,16 +13,17 @@ so a working toolchain is required to install this module.
 ##API
 On requiring the module, an instance of an [sqlite3](https://github.com/mapbox/node-sqlite3) client is created and
 connected to the local WordNet database. This client is then returned, and can be used according to the
-[sqlite3 API](https://github.com/mapbox/node-sqlite3/wiki/API#databaseclosecallback)
-(the returned object is an instance of *Database*, so methods like #run and #foreach can be called directly from it
+[sqlite3 API](https://github.com/mapbox/node-sqlite3/wiki/API#databaseclosecallback).The returned object is an instance
+of *Database*, so methods like #run and #foreach can be called directly from it.
 
 ```javascript
 var db = require("wordnet-sqlite");
 db.get("SELECT definition FROM words WHERE word = 'pulpy' LIMIT 1;", function (err, row) {
     console.log(row.definition);
 });
-
 ```
+Outputs:
+
 >like a pulp or overripe; not having stiffness
 
 ##Example
