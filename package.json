@@ -1,0 +1,12 @@
+{
+  "name": "wordnet-sqlite",
+  "description": "A node package exposing an SQLite database of the Princeton University WordNet database",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TMiguelT/wordnet-sqlite"
+  },
+  "version": "0.0.1",
+  "dependencies": {
+    "sqlite3": "^3.0.5"
+  }
+}
