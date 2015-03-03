@@ -5,7 +5,20 @@
     "type": "git",
     "url": "https://github.com/TMiguelT/wordnet-sqlite"
   },
-  "version": "1.0.0",
+  "keywords": [
+    "wordnet",
+    "dictionary",
+    "lookup",
+    "word",
+    "words",
+    "word-list",
+    "list",
+    "en",
+    "english",
+    "dict",
+    "dictionary"
+  ],
+  "version": "1.0.1",
   "dependencies": {
     "sqlite3": "^3.0.5"
   }

@@ -19,6 +19,24 @@ connected to the local WordNet database. This client is then returned, and can b
 [sqlite3 API](https://github.com/mapbox/node-sqlite3/wiki/API#databaseclosecallback).The returned object is an instance
 of *Database*, so methods like #run and #foreach can be called directly from it.
 
+Currently the database consists of only one table called `words`, which has the following columns:
+
+* `word`. A `text` field that contains the dictionary word in its most basic form (without a prefix or suffix) i.e.
+'child' will appear but not 'children'. Note that spaces are related with underscore, e.g. "out_of_the_way".
+For further information, have a look at the [WordNet documentation](http://wordnet.princeton.edu/wordnet/)
+
+* `definition`. A `text` field that contains a *gloss*, a string which which may contain a definition, one or more example
+ sentences, or both. For example the `definition` field for implicit is the string *being without doubt or reserve; "implicit trust"*,
+ consisting of a definition and one example sentence.
+
+* `type`. Also a text field that contains a string indicating the type of word this row is. One of "adj", "adv", "noun", or "verb".
+Note that types such as conjunctions and interjections are not part of the WordNet project so are not present in the database.
+
+* `rowid`. An `integer` field created automatically by SQLite. Correspends to the index of the word, so the first entry
+has a `rowid` of 1. However the words are in no particular order so this is not likely to be of any use.
+
+Here's a simple example usage of the database. See the [Example](#example) section for another example.
+
 ```javascript
 var db = require("wordnet-sqlite");
 db.get("SELECT definition FROM words WHERE word = 'pulpy' LIMIT 1;", function (err, row) {
