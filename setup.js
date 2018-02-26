@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var sqlite3 = require('sqlite3').verbose();
 var fs = require('fs');
 var readline = require('readline');
