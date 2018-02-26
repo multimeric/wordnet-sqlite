@@ -36,20 +36,28 @@ db.serialize(function () {
             //Split the line to find relevant variables
             var sections = line.split(/\s+\|\s+/);
             var cols = sections[0].split(/\s/);
-            stmt.run(cols[4], sections[1], type);
+            var words = cols
+                .filter(col => col.match(/^[^\d!"#$%&'()\*\+\-\.,\/:;<=>?@\[\\\]^_`{|}~]/gm)) // doesn't start with number or special letter
+                .filter(col => col.length > 1); // has two or more charactors
+
+            //Preserve cols[4] which always has a vaild meaning
+            if(words.indexOf(cols[4]) === -1){
+                words.push(cols[4])
+            }
+            
+            words.forEach(word => stmt.run(word, sections[1], type));
             rows++;
         });
-
 
         rl.on('close', function () {
             counter++;
             if (counter >= types.length) {
-                stmt.finalize();
-                db.run("END");
-                db.close();
+                stmt.finalize(()=>{
+                    db.run("END");
+                    db.exec("VACUUM");
+                    db.close();
+                });
             }
         });
     });
 });
-
-
